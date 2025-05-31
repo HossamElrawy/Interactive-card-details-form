@@ -1,0 +1,252 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 900px;
+    display: grid;
+    grid-template-columns: 1.42fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 127px;
+    padding: 187px 227px 186px 164px;
+    position: relative;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 483px;
+    background: url(images/bg-main-desktop.png);
+    z-index: -1;
+}
+.left-side {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: hsl(0, 100%, 100%);
+}
+.front {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.back {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.cardholder {
+    position: absolute;
+    left: 28px;
+    bottom: 24px;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+.cardnumber {
+    position: absolute;
+    left: 28px;
+    bottom: 72px;
+    font-size: 34px;
+}
+.expdate {
+    font-size: 17px;
+    position: absolute;
+    bottom: 24px;
+    right: 28px;
+}
+.cvc {
+    position: absolute;
+    bottom: 120px;
+    right: 57px;
+}
+.circle-div {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.white-circle {
+    width: 49px;
+    height: 49px;
+    background-color: hsl(0, 100%, 100%);
+    border-radius: 5000px;
+}
+.empty-circle {
+    width: 21px;
+    height: 21px;
+    border: 1px solid hsl(0, 100%, 100%);
+    border-radius: 5000px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+input {
+    font-family: "Space Grotesk";
+    height: 45px;
+    border-radius: 8px;
+    border: 1px solid hsl(270, 3%, 87%);
+    padding-left: 16px;
+    cursor: pointer;
+    background: 
+        linear-gradient(hsl(0, 100%, 100%), hsl(0, 100%, 100%)) padding-box, /* Fills the padding area with white */
+        linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box; /* Gradient for the border */
+    background-clip: padding-box, border-box;
+}
+input:focus {
+    border: 1px solid transparent;
+    outline: none;
+}
+.warn-input {
+    border: 1px solid hsl(0, 100%, 66%);
+}
+.warn-message {
+    color: hsl(0, 100%, 66%);
+    font-size: 12px;
+    display: none;
+}
+.show {
+    display: block;
+}
+.vertiacal-div,
+.some-div {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+.horizontal-div {
+    display: flex;
+    gap: 20px;
+}
+.smalling {
+    display: flex;
+    gap: 10px;
+}
+.smalling input {
+    width: 80px;
+}
+label {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    width: fit-content;
+    font-size: 12px;
+    color: hsl(278, 68%, 11%);
+}
+button {
+    height: 53px;
+    border: none;
+    border-radius: 8px;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 100%, 100%);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    width: 100%;
+}
+button:hover {
+    opacity: 0.7;
+}
+.thank-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 27px;
+}
+.thank-word {
+    width: fit-content;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: hsl(278, 68%, 11%);
+    font-size: 23px;
+    margin-top: 11px;
+}
+.added-para {
+    color: hsl(212, 12%, 71%);
+    margin-bottom: 22px;
+}
+@media (max-width : 800px) {
+    body {
+        min-height: 704px;
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+        padding: 32px 16px 45px;
+    }
+    .overlay {
+        background: url(images/bg-main-mobile.png);
+        bottom: auto;
+        right: 0;
+        width: auto;
+        height: 240px;
+    }
+    .left-side {
+        position: relative;
+        width: 100%;
+        height: 250px;
+    }
+    .front {
+        z-index: 2;
+        top: auto;
+        bottom: 0;
+    }
+    .img {
+        width: 286px;
+    }
+    .back {
+        bottom: auto;
+        top: 0;
+        box-sizing: border-box;
+    }
+    .cardholder {
+        left: 16px;
+        bottom: 20px;
+        font-size: 12px;
+    }
+    .cardnumber {
+        left: 16px;
+        bottom: 51px;
+        font-size: 22px;
+    }
+    .expdate {
+        font-size: 12px;
+        bottom: 20px;
+        right: 22px;
+    }
+    .cvc {
+        bottom: 77px;
+        right: 38px;
+        font-size: 12px;
+    }
+    .circle-div {
+        top: 18px;
+        left: 18px;
+    }
+    .white-circle {
+        width: 32px;
+        height: 32px;
+    }
+    .empty-circle {
+        width: 16px;
+        height: 16px;
+    }
+    .horizontal-div {
+        gap: 11px;
+    }
+    .smalling {
+        gap: 8px;
+    }
+    .smalling input {
+        width: 72px;
+    }
+    label {
+        font-size: 10px;
+    }
+}
